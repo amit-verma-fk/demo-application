@@ -40,5 +40,5 @@
 		</plugins>
 		<finalName>demo-application</finalName>
 	</build>
-
+	<packaging>war</packaging>
 </project>

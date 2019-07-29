@@ -1,4 +1,4 @@
-FROM openjdk:8
-ADD target/demo-application.jar demo-application.jar
-EXPOSE 8085
-ENTRYPOINT ["java", "-jar", "demo-application.jar"]
+From tomcat:8.0.51-jre8-alpine
+RUN rm -rf /usr/local/tomcat/webapps/*
+COPY ./target/demo-application.war /usr/local/tomcat/webapps/ROOT.war
+CMD ["catalina.sh","run"]
